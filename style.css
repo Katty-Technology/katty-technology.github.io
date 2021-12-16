@@ -1,0 +1,16 @@
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    background-image: url("logoMaior.png");
+  
+    height: 100%;
+  
+    background-color: blue;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+
+  
