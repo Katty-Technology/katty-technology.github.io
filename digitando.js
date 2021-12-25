@@ -16,5 +16,6 @@
   
   });
 }
+document.getElementById("year").innerHTML = new Date().getFullYear();
 const titulo = document.querySelector('.titulo-principal');
 typeWrite(titulo);

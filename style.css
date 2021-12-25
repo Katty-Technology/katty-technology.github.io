@@ -1,19 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@300;700&display=swap');
 *{
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif !important;
     margin:0;
     padding:0;
     border:0;
-    
 } 
+
+
+@media (min-width: 1201px) {
+  #quemsomos{
+    width: 50%;
+    margin: auto;
+  }
+  .titulo-principal{
+    color: #fff;
+    font-size: 90px;
+  }
+
+  .kattyIcon{
+    width: 300px;
+  }
+
+  .divMarginFoto{
+    margin: auto;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+  .titulo-principal{
+    color: #fff;
+    font-size: 45px;
+  }
+
+  #quemsomos{
+    width: 80%;
+    margin: auto;
+  }
+
+  .kattyIcon{
+    width: 200px;
+  }
+
+  #banner{
+    height: 900px !important;
+  }
+
+  .divMarginFoto{
+    margin: auto;
+    margin-top: 250px;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 979px) { 
+  .titulo-principal{
+    color: #fff;
+    font-size: 25px;
+  }
+
+  #quemsomos{
+    width: 100%;
+    margin: auto;
+  }
+
+  .kattyIcon{
+    width: 200px;
+  }
+
+  #banner{
+    height: 700px !important;
+  }
+
+  .divMarginFoto{
+    margin: auto;
+    text-align: center;
+    margin-top: 200px;
+    align-items: center;
+  }
+}
+
+#quemsomos{
+  text-align: center;
+}
+
+#projetos{
+  text-align: center;
+}
+
+#contato{
+  text-align: center;
+}
+
+.textoApresentativo{
+  color:#fff;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
 body{
 height: 100%;
 width: 100%;
 }
 
-.titulo-principal{
-  color: #fff;
-  font-size: 90px;
+.titulos{
+  text-align-last: center;
+  color:white;
 }
 
 .efeitoDigita:after{
@@ -32,17 +128,14 @@ width: 100%;
   }
 }
 
+body{
+  background-image: url('./assets/img/starblack.gif');
+}
+
 #banner{
   width: 100%;
   display: flex;
   height: 1000px;
-  background-image: url('./assets/img/starblack.gif');
-}
-
-#banner div{
-  margin: auto;
-  text-align: center;
-  align-items: center;
 }
 
 .kattyIcon{
@@ -70,7 +163,6 @@ width: 100%;
 }
 
 .boxSeta{
-  margin-top: 100px;
   height: 150px;
 }
 
