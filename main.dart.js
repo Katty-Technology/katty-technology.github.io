@@ -54510,7 +54510,7 @@ A.D1.prototype={}
 A.og.prototype={}
 A.ze.prototype={
 Ej(a,b){var s=null,r=t.E
-return A.a([A.eI(s,A.i3(A.a([A.dg("Contato",A.ct(s,s,B.H,s,s,s,s,s,s,s,s,50,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),s,s),new A.mP(5,2,5,0,B.H,s),new A.cK(B.e9,A.dg("Ficou interessado?? Acesse nossas Redes Sociais Abaixo e fale conosco!",A.ct(s,s,B.H,s,s,s,s,s,s,s,s,15,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s),A.jL(A.a([A.a7m(A.a6o(B.xP,B.bj,30),new A.NY()),A.hw(s,s,30),A.a7m(A.a6o(B.xR,B.bj,30),new A.NZ()),A.hw(s,s,30),A.a7m(A.a6o(B.xQ,B.bj,30),new A.O_())],r),B.bv,B.aq)],r),b),s,s,s,s,s,a)],r)},
+return A.a([A.eI(s,A.i3(A.a([A.dg("Contato",A.ct(s,s,B.H,s,s,s,s,s,s,s,s,50,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),s,s),new A.mP(5,2,5,0,B.H,s),new A.cK(B.e9,A.dg("Acesse nossas Redes Sociais Abaixo e fale conosco!",A.ct(s,s,B.H,s,s,s,s,s,s,s,s,15,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),s),A.jL(A.a([A.a7m(A.a6o(B.xP,B.bj,30),new A.NY()),A.hw(s,s,30),A.a7m(A.a6o(B.xR,B.bj,30),new A.NZ()),A.hw(s,s,30),A.a7m(A.a6o(B.xQ,B.bj,30),new A.O_())],r),B.bv,B.aq)],r),b),s,s,s,s,s,a)],r)},
 O(a,b){return new A.jw(new A.NX(this),null)}}
 A.NY.prototype={
 $0(){$.hW().hS("open",["https://www.facebook.com/KattyTechnologyOficial"])},
@@ -54564,7 +54564,7 @@ else return new A.Bb(null)},
 $S:351}
 A.Cd.prototype={
 El(a,b){var s=null,r=A.dg("Portif\xf3lio",A.ct(s,s,B.H,s,s,s,s,s,s,s,s,50,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),s,s),q=A.dg("Alguns dos nossos projetos",A.ct(s,s,B.H,s,s,s,s,s,s,s,s,15,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),p=A.c8(0,0,2),o=$.L,n=t.E
-return A.a([A.eI(s,A.i3(A.a([r,new A.mP(5,2,5,0,B.H,s),new A.cK(B.e9,q,s),new A.qa(new A.N9(400,!0,!0,p,!0),new A.Uo(this),new A.N8(new A.ax(new A.Q(o,t.dX),t.Fe)),4,s)],n),b),s,s,s,s,s,a)],n)},
+return A.a([A.eI(s,A.i3(A.a([r,new A.mP(5,2,5,0,B.H,s),new A.cK(B.e9,q,s),new A.qa(new A.N9(400,!0,!0,p,!0),new A.Uo(this),new A.N8(new A.ax(new A.Q(o,t.dX),t.Fe)),3,s)],n),b),s,s,s,s,s,a)],n)},
 O(a,b){return new A.jw(new A.Un(this),null)}}
 A.Uo.prototype={
 $3(a,b,c){var s=null
@@ -54594,7 +54594,7 @@ A.Bf.prototype={
 O(a,b){var s=A.br(b).a9
 return new A.rQ(new A.Aq(null),"Katty Technology",A.ac6(null,B.mA,new A.d0(A.eO(s.a),A.eO(s.b),A.eO(s.c),A.eO(s.d),A.eO(s.e),A.eO(s.f),A.eO(s.r),A.eO(s.x),A.eO(s.y),A.eO(s.z),A.eO(s.Q),A.eO(s.ch),A.eO(s.cx))),!1,null)}}
 A.Aq.prototype={
-O(a,b){var s=null,r=b.a8(t.w).f,q=A.i3(A.a([new A.Bm(s),new A.cK(B.cG,new A.AJ(s),s),new A.cK(B.cG,new A.Ck(s),s),new A.cK(B.cG,new A.Cd(A.a(["https://kauaquino.github.io/img/leagueofsite.png","https://kauaquino.github.io/img/nazisite.png","https://kauaquino.github.io/img/loja.png","https://kauaquino.github.io/img/diario.png"],t.s),s),s),new A.cK(B.cG,new A.ze(s),s)],t.E),B.V)
+O(a,b){var s=null,r=b.a8(t.w).f,q=A.i3(A.a([new A.Bm(s),new A.cK(B.cG,new A.AJ(s),s),new A.cK(B.cG,new A.Ck(s),s),new A.cK(B.cG,new A.Cd(A.a(["https://kauaquino.github.io/img/leagueofsite.png","https://kauaquino.github.io/img/loja.png","https://kauaquino.github.io/img/diario.png"],t.s),s),s),new A.cK(B.cG,new A.ze(s),s)],t.E),B.V)
 return new A.u1(A.eI(s,new A.Du(!0,q,s),s,new A.h0(s,new A.zq(new A.qQ("assets/images/Background.gif",1,s,s),B.fx),s,s,s,s,B.be),r.a.b*100,s,s,s),s)}}
 A.iR.prototype={
 gl(a){return this.b},
