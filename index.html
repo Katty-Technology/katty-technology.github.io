@@ -1,53 +1,90 @@
-
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katty Technology</title>
-    <link rel="shortcut icon" href="/assets/img/IconKatty.png" type="image/x-icon">
+  <base href="/">
 
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Landing Page da empresa Katty Technology.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Katty Technology">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Katty Technology</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    var serviceWorkerVersion = '1963959866';
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
 
-    <section id="banner">
-        <div class="divMarginFoto">
-            <img class="kattyIcon" src="assets/img/IconKatty.png" >
-            <h3 class="titulo-principal efeitoDigita">Katty Technology</h3>
-           <div class="boxSeta">
-                <img class="setaIcon" src="assets/img/arrow.png" width="100" height="100">
-           </div>
-        </div>
-    </section>
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing || reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
 
-    <section id="quemSomos">
-       <h1 class="titulos">Quem Somos?</h1>
-       <img  src="assets/img/qmsomos.gif" width="100" height="100">
-       <br>
-       <p class="textoApresentativo">
-        Katty Technology é uma Desenvolvedora Web/Mobile/Games, criada em 2021 por Kauã Maia Aquino e Natália Fernandes de Souza, Produzimos Sites, Ecommerces, Aplicativos Android, Programação de Jogos, Design e muito mais, Serviços de Qualidade com a máxima dedicação ao cliente, venha com a gente faça um orçamento já!
-       </p>
-    </section>
-
-    <section id="projetos">
-        <h1 class="titulos">Projetos</h1>
-        <img  src="assets/img/projetos.gif" width="100" height="100">
-
-     </section>
-
-     <section id="contato">
-        <h1 class="titulos">Contato</h1>
-        <img  src="assets/img/contato.gif" width="100" height="100">
-   
-     </section>
-
-     <footer>
-        <h4 class="text">Katty Technology ©<span id="year"></span> - Todos Direitos Reservados</h4>
-     </footer>
-
-
-    <script src="digitando.js"></script>
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
 </body>
 </html>
-
-
