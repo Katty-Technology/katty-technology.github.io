@@ -1,1 +1,101 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"/><link rel="icon" href="/Sunday/icon.png"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="Veja o clima do seu estado!"/><link rel="apple-touch-icon" href="/Sunday/icon.png"/><link rel="manifest" href="/Sunday/manifest.json"/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet"><title>Sunday - Veja o Clima</title><script defer="defer" src="/Sunday/static/js/main.9e4c72f7.js"></script><link href="/Sunday/static/css/main.9d8fa414.css" rel="stylesheet"></head><body><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Landing Page da empresa Katty Technology.">
+
+  
+  <meta name="twitter:title" content="Katty Technology">
+  <meta name="twitter:description" content="Landing Page da empresa Katty Technology.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Katty-Technology/katty-technology.github.io/main/assets/assets/images/Logo.png">
+  <meta property="og:title" content="Katty Technology">
+  <meta property="og:type" content="Landing Page" />
+  <meta property="og:description" content="Landing Page da empresa Katty Technology.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Katty-Technology/katty-technology.github.io/main/assets/assets/images/Logo.png">
+  <meta property="og:url" content="https://katty-technology.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Katty Technology">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Katty Technology</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    var serviceWorkerVersion = '2232941260';
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
+
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing || reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
+</body>
+</html>
