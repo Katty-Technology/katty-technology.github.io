@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sunday/static/css/main.9d8fa414.css",
+    "main.js": "/Sunday/static/js/main.9e4c72f7.js",
+    "index.html": "/Sunday/index.html",
+    "main.9d8fa414.css.map": "/Sunday/static/css/main.9d8fa414.css.map",
+    "main.9e4c72f7.js.map": "/Sunday/static/js/main.9e4c72f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d8fa414.css",
+    "static/js/main.9e4c72f7.js"
+  ]
+}
